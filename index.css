@@ -734,68 +734,6 @@ footer {
   background: var(--blue);
 }
 
-/* ── ANIMATIONS ── */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* ── RESPONSIVE ── */
-@media (max-width: 900px) {
-  nav {
-    padding: 16px 24px;
-  }
-  .nav-links {
-    display: none;
-  }
-  .hero,
-  .about,
-  .core-values {
-    flex-direction: column;
-    padding: 48px 24px;
-  }
-  .features,
-  .popular,
-  footer,
-  .stats {
-    padding: 48px 24px;
-  }
-  .search-bar {
-    margin: 0 24px;
-    flex-direction: column;
-    align-items: stretch;
-    border-radius: 14px;
-  }
-  .features-grid,
-  .properties-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  .stats {
-    grid-template-columns: 1fr 1fr;
-  }
-  .cta-banner {
-    margin: 32px 24px;
-    padding: 48px 32px;
-  }
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 /* Hide popup by default */
 .popup {
   display: none;
@@ -842,3 +780,74 @@ footer {
   padding: 10px;
   margin: 10px 0;
 }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  nav {
+    padding: 16px 24px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .hero,
+  .about,
+  .core-values {
+    flex-direction: column;
+    padding: 48px 24px;
+  }
+  .features,
+  .popular,
+  footer,
+  .stats {
+    padding: 48px 24px;
+  }
+  .search-bar {
+    margin: 0 24px;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 14px;
+  }
+  .features-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .properties-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .features-grid,
+  .properties-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cta-banner {
+    margin: 32px 24px;
+    padding: 48px 32px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
