@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Properties</title>
+    <link rel="stylesheet" href="browse.css">
+</head>
+<body>
+    <!-- SEARCH BAR -->
+    <h1>Search Properties</h1>
+<div class="search-bar">
+  <div class="search-field">
+    <label>Property Type</label>
+    <select>
+      <option>🏠 Mansion</option>
+      <option>🏢 Apartment</option>
+      <option>🏡 Villa</option>
+      <option>🏗️ Studio</option>
+    </select>
+  </div>
+  <div class="search-divider"></div>
+  <div class="search-field">
+    <label>Location</label>
+    <input type="text" value="Easter Boleskine, Scotland" readonly>
+  </div>
+  <div class="search-divider"></div>
+  <div class="search-field">
+    <label>Average Price</label>
+    <select>
+      <option>$8,000 – $12,000</option>
+      <option>$12,000 – $20,000</option>
+      <option>$20,000 – $50,000</option>
+      <option>$50,000+</option>
+    </select>
+  </div>
+  <button class="search-btn">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    Search
+  </button>
+</div>
+
+<!-- PROPERTY GRID -->
+<div class="property-grid">
+
+  <% properties.forEach(property => { %>
+    <div class="property-card">
+      <div class="property-image">
+        <img src="/images/property<%= property.property_id %>.jpg" alt="<%= property.title %>">
+      </div>
+      <div class="property-info">
+        <h2><%= property.title %></h2>
+        <p><%= property.description %></p>
+        <div class="property-meta">
+          <span>📍 <%= property.location %></span>
+          <span>💰 KES. <%= property.price.toLocaleString() %></span>
+          <span>🏷️ <%= property.property_type %></span>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+
+  </div>  
+
+</body>
+</html>

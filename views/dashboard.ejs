@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CasaXavi – Buyer Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="logo">Casa<span>Xavi</span></div>
+
+  <a class="nav-link active" href="#">🏠 Overview</a>
+  <a class="nav-link" href="search.html">🔍 Browse</a>
+  <a class="nav-link" href="#">❤️ Saved</a>
+  <a class="nav-link" href="#">📅 Viewings</a>
+  <a class="nav-link" href="#">💬 Messages</a>
+  <a class="nav-link" href="#">💰 Budget</a>
+  <a class="nav-link" href="#">👤 Profile</a>
+
+  <div class="sidebar-bottom">
+    <a class="nav-link" href="index.html">← Back to site</a>
+    <a class="nav-link" href="index.html">🚪 Log out</a>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<div class="main">
+
+  <div class="topbar">
+    <div>
+      <h1>Good morning, John 👋</h1>
+      <p>Monday, 28 April 2026</p>
+    </div>
+    <div class="avatar">JD</div>
+  </div>
+
+  <div class="content">
+
+    <!-- STATS -->
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-icon">🏠</div>
+        <div class="stat-val">3</div>
+        <div class="stat-label">Saved Properties</div>
+      </div>
+      <div class="stat">
+        <div class="stat-icon">📅</div>
+        <div class="stat-val">2</div>
+        <div class="stat-label">Upcoming Viewings</div>
+      </div>
+      <div class="stat">
+        <div class="stat-icon">💬</div>
+        <div class="stat-val">3</div>
+        <div class="stat-label">Unread Messages</div>
+      </div>
+      <div class="stat">
+        <div class="stat-icon">🔔</div>
+        <div class="stat-val">8</div>
+        <div class="stat-label">Alert Matches</div>
+      </div>
+    </div>
+
+    <!-- PROPERTIES + VIEWINGS -->
+    <div class="two-col">
+
+      <div class="card">
+        <div class="card-head">Saved Properties <a href="#">View all →</a></div>
+        <div class="card-body">
+
+          <div class="prop">
+            <div class="prop-thumb t1">🏡</div>
+            <div>
+              <div class="prop-name">Maple Grove Residence</div>
+              <div class="prop-loc">📍 Hilperton, Wiltshire</div>
+            </div>
+            <div class="prop-right">
+              <div class="prop-price">£120,000</div>
+              <span class="badge green">Available</span>
+            </div>
+          </div>
+
+          <div class="prop">
+            <div class="prop-thumb t2">🏘️</div>
+            <div>
+              <div class="prop-name">Winterbourne Manor</div>
+              <div class="prop-loc">📍 Winterbourne, Bristol</div>
+            </div>
+            <div class="prop-right">
+              <div class="prop-price">£130,000</div>
+              <span class="badge gold">Viewing</span>
+            </div>
+          </div>
+
+          <div class="prop">
+            <div class="prop-thumb t3">🏠</div>
+            <div>
+              <div class="prop-name">Hay Mills Townhouse</div>
+              <div class="prop-loc">📍 Hay Mills, Birmingham</div>
+            </div>
+            <div class="prop-right">
+              <div class="prop-price">£125,000</div>
+              <span class="badge green">Available</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">Upcoming Viewings</div>
+        <div class="card-body">
+
+          <div class="viewing">
+            <div class="v-date"><div class="v-day">30</div><div class="v-mon">Apr</div></div>
+            <div>
+              <div class="v-name">Maple Grove</div>
+              <div class="v-time">10:30 AM · Sarah Mitchell</div>
+            </div>
+            <div class="v-actions">
+              <button class="v-btn ok">✓</button>
+              <button class="v-btn no">✕</button>
+            </div>
+          </div>
+
+          <div class="viewing">
+            <div class="v-date"><div class="v-day">03</div><div class="v-mon">May</div></div>
+            <div>
+              <div class="v-name">Winterbourne Manor</div>
+              <div class="v-time">2:00 PM · James Harlow</div>
+            </div>
+            <div class="v-actions">
+              <button class="v-btn ok">✓</button>
+              <button class="v-btn no">✕</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- BUDGET + MESSAGES -->
+    <div class="two-col">
+
+      <div class="card">
+        <div class="card-head">Budget Tracker</div>
+        <div class="card-body">
+          <div class="budget-val">£95,200</div>
+          <div class="budget-sub">Saved towards your property</div>
+          <div class="bar-wrap"><div class="bar-fill" id="budgetBar"></div></div>
+          <div class="bar-label">68% of £140,000 · £44,800 remaining</div>
+          <div class="budget-grid">
+            <div class="b-item"><div class="b-label">Deposit</div><div class="b-val pos">£14,000 ✓</div></div>
+            <div class="b-item"><div class="b-label">Legal Fees</div><div class="b-val neg">~£2,000</div></div>
+            <div class="b-item"><div class="b-label">Mortgage</div><div class="b-val">£780/mo</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">Messages <a href="#">View all →</a></div>
+        <div class="card-body">
+
+          <div class="msg unread">
+            <div class="msg-av">SM</div>
+            <div style="flex:1;min-width:0;">
+              <div class="msg-name">Sarah Mitchell</div>
+              <div class="msg-preview">Confirming your Maple Grove viewing on the 30th…</div>
+            </div>
+            <div class="msg-time">9:42 AM</div>
+          </div>
+
+          <div class="msg unread">
+            <div class="msg-av">JH</div>
+            <div style="flex:1;min-width:0;">
+              <div class="msg-name">James Harlow</div>
+              <div class="msg-preview">Would you like to arrange a second viewing?</div>
+            </div>
+            <div class="msg-time">Yesterday</div>
+          </div>
+
+          <div class="msg unread">
+            <div class="msg-av g">CX</div>
+            <div style="flex:1;min-width:0;">
+              <div class="msg-name">CasaXavi Support</div>
+              <div class="msg-preview">8 new properties matched your Bristol alert.</div>
+            </div>
+            <div class="msg-time">Mon</div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script src="dashboard.js"></script>
+</body>
+</html>
